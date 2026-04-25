@@ -16,20 +16,43 @@ namespace GH_Studio {
     public partial class Live : Form {
 
         private static string[] playlist = Array.Empty<string>();
+
         private static string[] slides = Array.Empty<string>();
 
         private static int currentPlaylist = 0;
+
         private static int currentSlide = 0;
 
         private static string numberKey = "";
 
         public static string SelectedSong = "";
 
+        List<Panel> lyricsPanels;
+
+        List<Label> lyricsLabels;
+
         Presenter presenter = new();
 
         public Live() {
 
             InitializeComponent();
+
+            lyricsPanels = new List<Panel> {
+                lyrics1, lyrics2, lyrics3, lyrics4, lyrics5, lyrics6, lyrics7, lyrics8, lyrics9, lyrics10,
+                lyrics11, lyrics12, lyrics13, lyrics14, lyrics15, lyrics16, lyrics17, lyrics18, lyrics19, lyrics20
+            };
+
+            lyricsLabels = new List<Label> {
+                l1, l2, l3, l4, l5, l6, l7, l8, l9, l10,
+                l11, l12, l13, l14, l15, l16, l17, l18, l19, l20
+            };
+
+            string bgImage = File.ReadAllText(Constant.songBgImageFile);
+            if (bgImage != String.Empty) {
+                for (int i = 0; i < lyricsLabels.Count; i++) {
+                    lyricsLabels[i].BackgroundImage = new Bitmap(bgImage);
+                }
+            }
         }
 
         private void Live_Load(object sender, EventArgs e) {
@@ -45,6 +68,7 @@ namespace GH_Studio {
             Color color = Color.FromName(colorString);
             label1.ForeColor = color;
             colorDialog1.Color = color;
+            UpdatePreviewLyricsConfiguration(color);
 
             // Setting of Background Image
             string bgImage = File.ReadAllText(Constant.songBgImageFile);
@@ -230,6 +254,8 @@ namespace GH_Studio {
             if (playlist != null && playlist.Length > 0) {
                 presenter.ChangeText(slides[0]);
                 label1.Text = slides[0];
+
+                ShowPreviewLyrics(slides);
             }
 
             panel1.Focus();
@@ -252,6 +278,60 @@ namespace GH_Studio {
                 listBox2.Items.Add(Path.GetFileName(songTitle).Replace(".ghlive", String.Empty));
             }
             listBox2.Sorted = true;
+        }
+
+        public void ShowPreviewLyrics(string[] latestSlides) {
+
+            HidePreviewLyrics();
+
+            int slideCount = latestSlides.Length;
+
+            for (int i = 0; i < slideCount; i++) {
+                lyricsPanels[i].Visible = i < slideCount;
+                lyricsLabels[i].Text = latestSlides[i];
+            }
+
+            UpdateSelectedPreviewLyrics(0);
+        }
+
+        public void HidePreviewLyrics() {
+
+            foreach (var panel in lyricsPanels) {
+                panel.Visible = false;
+            }
+        }
+
+        public void UpdateSelectedPreviewLyrics(int currentSlide) {
+
+            foreach (var panel in lyricsPanels) {
+                panel.BackColor = Color.Transparent;
+            }
+
+            lyricsPanels[currentSlide].BackColor = Color.Red;
+        }
+
+        public void UpdatePreviewLyricsConfiguration(Color color) {
+
+            l1.ForeColor = color;
+            l2.ForeColor = color;
+            l3.ForeColor = color;
+            l4.ForeColor = color;
+            l5.ForeColor = color;
+            l6.ForeColor = color;
+            l7.ForeColor = color;
+            l8.ForeColor = color;
+            l9.ForeColor = color;
+            l10.ForeColor = color;
+            l11.ForeColor = color;
+            l12.ForeColor = color;
+            l13.ForeColor = color;
+            l14.ForeColor = color;
+            l15.ForeColor = color;
+            l16.ForeColor = color;
+            l17.ForeColor = color;
+            l18.ForeColor = color;
+            l19.ForeColor = color;
+            l20.ForeColor = color;
         }
 
         static void MoveSelectedItem(ListBox listBox, int direction) {
@@ -291,6 +371,8 @@ namespace GH_Studio {
                     currentSlide = 0;
                     presenter.ChangeText(slides[currentSlide]);
                     label1.Text = slides[currentSlide];
+
+                    ShowPreviewLyrics(slides);
                 }
             }
 
@@ -305,6 +387,8 @@ namespace GH_Studio {
                     currentSlide = 0;
                     presenter.ChangeText(slides[currentSlide]);
                     label1.Text = slides[currentSlide];
+
+                    ShowPreviewLyrics(slides);
                 }
             }
 
@@ -313,6 +397,8 @@ namespace GH_Studio {
                     currentSlide--;
                     presenter.ChangeText(slides[currentSlide]);
                     label1.Text = slides[currentSlide];
+
+                    UpdateSelectedPreviewLyrics(currentSlide);
                 }
             }
 
@@ -321,11 +407,16 @@ namespace GH_Studio {
                     currentSlide++;
                     presenter.ChangeText(slides[currentSlide]);
                     label1.Text = slides[currentSlide];
+
+                    UpdateSelectedPreviewLyrics(currentSlide);
                 }
             }
 
             if (keyData == Keys.Escape) {
                 presenter.Close();
+                label1.Text = "GH Live";
+
+                HidePreviewLyrics();
             }
 
             if (keyData == Keys.D1 || keyData == Keys.NumPad1) {
@@ -377,6 +468,8 @@ namespace GH_Studio {
 
                         presenter.ChangeText(slides[currentSlide]);
                         label1.Text = slides[currentSlide];
+
+                        UpdateSelectedPreviewLyrics(currentSlide);
                     }
                 }
 
@@ -384,6 +477,186 @@ namespace GH_Studio {
             }
 
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void l1_Click(object sender, EventArgs e) {
+
+            currentSlide = 0;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l2_Click(object sender, EventArgs e) {
+
+            currentSlide = 1;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l3_Click(object sender, EventArgs e) {
+
+            currentSlide = 2;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l4_Click(object sender, EventArgs e) {
+
+            currentSlide = 3;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l5_Click(object sender, EventArgs e) {
+
+            currentSlide = 4;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l6_Click(object sender, EventArgs e) {
+
+            currentSlide = 5;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l7_Click(object sender, EventArgs e) {
+
+            currentSlide = 6;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l8_Click(object sender, EventArgs e) {
+
+            currentSlide = 7;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l9_Click(object sender, EventArgs e) {
+
+            currentSlide = 8;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l10_Click(object sender, EventArgs e) {
+
+            currentSlide = 9;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l11_Click(object sender, EventArgs e) {
+
+            currentSlide = 10;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l12_Click(object sender, EventArgs e) {
+
+            currentSlide = 11;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l13_Click(object sender, EventArgs e) {
+
+            currentSlide = 12;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l14_Click(object sender, EventArgs e) {
+
+            currentSlide = 13;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l15_Click(object sender, EventArgs e) {
+
+            currentSlide = 14;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l16_Click(object sender, EventArgs e) {
+
+            currentSlide = 15;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l17_Click(object sender, EventArgs e) {
+
+            currentSlide = 16;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l18_Click(object sender, EventArgs e) {
+
+            currentSlide = 17;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l19_Click(object sender, EventArgs e) {
+
+            currentSlide = 18;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
+        }
+
+        private void l20_Click(object sender, EventArgs e) {
+
+            currentSlide = 19;
+            presenter.ChangeText(slides[currentSlide]);
+            label1.Text = slides[currentSlide];
+
+            UpdateSelectedPreviewLyrics(currentSlide);
         }
     }
 }
