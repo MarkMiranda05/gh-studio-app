@@ -30,8 +30,7 @@
             bookComboBox = new ComboBox();
             chapterComboBox = new ComboBox();
             panel1 = new Panel();
-            label5 = new Label();
-            listBox1 = new ListBox();
+            listBox2 = new ListBox();
             changeColorButton = new Button();
             removeBackgroundButton = new Button();
             changeBackgroundButton = new Button();
@@ -49,27 +48,30 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(489, 14);
+            label3.Font = new Font("Ebrima", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(510, 14);
             label3.Name = "label3";
-            label3.Size = new Size(65, 21);
+            label3.Size = new Size(70, 21);
             label3.TabIndex = 24;
             label3.Text = "Chapter";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(252, 14);
+            label2.Font = new Font("Ebrima", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(247, 14);
             label2.Name = "label2";
-            label2.Size = new Size(45, 21);
+            label2.Size = new Size(49, 21);
             label2.TabIndex = 23;
             label2.Text = "Book";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(16, 14);
+            label1.Font = new Font("Ebrima", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(11, 14);
             label1.Name = "label1";
-            label1.Size = new Size(63, 21);
+            label1.Size = new Size(68, 21);
             label1.TabIndex = 22;
             label1.Text = "Version";
             // 
@@ -79,11 +81,12 @@
             versionComboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             versionComboBox.BackColor = SystemColors.Window;
             versionComboBox.Cursor = Cursors.Hand;
+            versionComboBox.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             versionComboBox.FormattingEnabled = true;
             versionComboBox.Items.AddRange(new object[] { "World English Bible", "King James Version", "Tagalog" });
-            versionComboBox.Location = new Point(16, 38);
+            versionComboBox.Location = new Point(11, 38);
             versionComboBox.Name = "versionComboBox";
-            versionComboBox.Size = new Size(230, 29);
+            versionComboBox.Size = new Size(230, 25);
             versionComboBox.TabIndex = 0;
             versionComboBox.TabStop = false;
             // 
@@ -92,10 +95,11 @@
             bookComboBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             bookComboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             bookComboBox.Cursor = Cursors.Hand;
+            bookComboBox.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             bookComboBox.FormattingEnabled = true;
-            bookComboBox.Location = new Point(252, 38);
+            bookComboBox.Location = new Point(247, 38);
             bookComboBox.Name = "bookComboBox";
-            bookComboBox.Size = new Size(231, 29);
+            bookComboBox.Size = new Size(257, 25);
             bookComboBox.TabIndex = 0;
             bookComboBox.TabStop = false;
             bookComboBox.SelectedValueChanged += bookComboBox_SelectedValueChanged;
@@ -105,17 +109,17 @@
             chapterComboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             chapterComboBox.Cursor = Cursors.Hand;
             chapterComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            chapterComboBox.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             chapterComboBox.FormattingEnabled = true;
-            chapterComboBox.Location = new Point(489, 38);
+            chapterComboBox.Location = new Point(510, 38);
             chapterComboBox.Name = "chapterComboBox";
-            chapterComboBox.Size = new Size(110, 29);
+            chapterComboBox.Size = new Size(110, 25);
             chapterComboBox.TabIndex = 0;
             chapterComboBox.TabStop = false;
             // 
             // panel1
             // 
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(listBox1);
+            panel1.Controls.Add(listBox2);
             panel1.Controls.Add(changeColorButton);
             panel1.Controls.Add(removeBackgroundButton);
             panel1.Controls.Add(changeBackgroundButton);
@@ -134,39 +138,29 @@
             panel1.Size = new Size(989, 572);
             panel1.TabIndex = 25;
             // 
-            // label5
+            // listBox2
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(654, 213);
-            label5.Name = "label5";
-            label5.Size = new Size(60, 21);
-            label5.TabIndex = 30;
-            label5.Text = "History";
-            // 
-            // listBox1
-            // 
-            listBox1.BackColor = SystemColors.Info;
-            listBox1.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 21;
-            listBox1.Location = new Point(654, 238);
-            listBox1.Margin = new Padding(4);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(319, 319);
-            listBox1.TabIndex = 29;
-            listBox1.TabStop = false;
+            listBox2.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox2.FormattingEnabled = true;
+            listBox2.HorizontalScrollbar = true;
+            listBox2.ItemHeight = 17;
+            listBox2.Location = new Point(11, 145);
+            listBox2.Name = "listBox2";
+            listBox2.Size = new Size(609, 412);
+            listBox2.TabIndex = 31;
+            listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
             // 
             // changeColorButton
             // 
             changeColorButton.BackColor = Color.Wheat;
             changeColorButton.Cursor = Cursors.Hand;
             changeColorButton.FlatStyle = FlatStyle.Flat;
-            changeColorButton.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            changeColorButton.Font = new Font("Ebrima", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             changeColorButton.ForeColor = Color.Black;
-            changeColorButton.Location = new Point(164, 74);
+            changeColorButton.Location = new Point(818, 222);
             changeColorButton.Margin = new Padding(4);
             changeColorButton.Name = "changeColorButton";
-            changeColorButton.Size = new Size(140, 31);
+            changeColorButton.Size = new Size(161, 25);
             changeColorButton.TabIndex = 28;
             changeColorButton.TabStop = false;
             changeColorButton.Text = "Change Font Color";
@@ -178,12 +172,12 @@
             removeBackgroundButton.BackColor = Color.Wheat;
             removeBackgroundButton.Cursor = Cursors.Hand;
             removeBackgroundButton.FlatStyle = FlatStyle.Flat;
-            removeBackgroundButton.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            removeBackgroundButton.Font = new Font("Ebrima", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             removeBackgroundButton.ForeColor = Color.Black;
-            removeBackgroundButton.Location = new Point(459, 74);
+            removeBackgroundButton.Location = new Point(818, 255);
             removeBackgroundButton.Margin = new Padding(4);
             removeBackgroundButton.Name = "removeBackgroundButton";
-            removeBackgroundButton.Size = new Size(140, 31);
+            removeBackgroundButton.Size = new Size(161, 25);
             removeBackgroundButton.TabIndex = 27;
             removeBackgroundButton.TabStop = false;
             removeBackgroundButton.Text = "Remove Background";
@@ -195,12 +189,12 @@
             changeBackgroundButton.BackColor = Color.Wheat;
             changeBackgroundButton.Cursor = Cursors.Hand;
             changeBackgroundButton.FlatStyle = FlatStyle.Flat;
-            changeBackgroundButton.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            changeBackgroundButton.Font = new Font("Ebrima", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             changeBackgroundButton.ForeColor = Color.Black;
-            changeBackgroundButton.Location = new Point(312, 74);
+            changeBackgroundButton.Location = new Point(649, 255);
             changeBackgroundButton.Margin = new Padding(4);
             changeBackgroundButton.Name = "changeBackgroundButton";
-            changeBackgroundButton.Size = new Size(140, 31);
+            changeBackgroundButton.Size = new Size(161, 25);
             changeBackgroundButton.TabIndex = 26;
             changeBackgroundButton.TabStop = false;
             changeBackgroundButton.Text = "Change Background";
@@ -213,19 +207,19 @@
             panel2.BackgroundImageLayout = ImageLayout.Stretch;
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(label4);
-            panel2.Location = new Point(16, 229);
+            panel2.Location = new Point(649, 14);
             panel2.Name = "panel2";
-            panel2.Size = new Size(584, 328);
+            panel2.Size = new Size(330, 201);
             panel2.TabIndex = 25;
             // 
             // label4
             // 
             label4.BackColor = Color.Transparent;
             label4.Dock = DockStyle.Fill;
-            label4.Font = new Font("Ebrima", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Ebrima", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(0, 0);
             label4.Name = "label4";
-            label4.Size = new Size(582, 326);
+            label4.Size = new Size(328, 199);
             label4.TabIndex = 0;
             label4.Text = "GH Bible";
             label4.TextAlign = ContentAlignment.MiddleCenter;
@@ -235,12 +229,12 @@
             changeFontButton.BackColor = Color.Wheat;
             changeFontButton.Cursor = Cursors.Hand;
             changeFontButton.FlatStyle = FlatStyle.Flat;
-            changeFontButton.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            changeFontButton.Font = new Font("Ebrima", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             changeFontButton.ForeColor = Color.Black;
-            changeFontButton.Location = new Point(16, 74);
+            changeFontButton.Location = new Point(649, 222);
             changeFontButton.Margin = new Padding(4);
             changeFontButton.Name = "changeFontButton";
-            changeFontButton.Size = new Size(140, 31);
+            changeFontButton.Size = new Size(161, 25);
             changeFontButton.TabIndex = 0;
             changeFontButton.TabStop = false;
             changeFontButton.Text = "Change Font Style";
@@ -249,18 +243,18 @@
             // 
             // goButton
             // 
-            goButton.BackColor = Color.Wheat;
+            goButton.BackColor = Color.SandyBrown;
             goButton.Cursor = Cursors.Hand;
             goButton.FlatStyle = FlatStyle.Flat;
             goButton.Font = new Font("Ebrima", 18F, FontStyle.Bold, GraphicsUnit.Point);
             goButton.ForeColor = Color.Black;
-            goButton.Location = new Point(16, 144);
+            goButton.Location = new Point(11, 70);
             goButton.Margin = new Padding(4);
             goButton.Name = "goButton";
-            goButton.Size = new Size(584, 68);
+            goButton.Size = new Size(609, 61);
             goButton.TabIndex = 0;
             goButton.TabStop = false;
-            goButton.Text = "Live";
+            goButton.Text = "Go Live";
             goButton.UseVisualStyleBackColor = false;
             goButton.Click += goButton_Click;
             // 
@@ -309,7 +303,6 @@
         private Button changeColorButton;
         private ColorDialog colorDialog1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private ListBox listBox1;
-        private Label label5;
+        private ListBox listBox2;
     }
 }

@@ -35,6 +35,12 @@ namespace GH_Studio {
             InitializeComponent();
         }
 
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e) {
+
+            currentVerse = listBox2.SelectedIndex;
+            displayText();
+        }
+
         private void Bible_Load(object sender, EventArgs e) {
 
             // Setting of Font Style
@@ -134,8 +140,7 @@ namespace GH_Studio {
                 }
             }
 
-            listBox1.Items.Insert(0, bookComboBox.SelectedItem + " " + chapterComboBox.SelectedItem);
-            listBox1.ClearSelected();
+            listBox2.DataSource = bibleVerses;
 
             panel1.Focus();
         }
@@ -235,78 +240,6 @@ namespace GH_Studio {
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData) {
 
-            if (keyData == Keys.Up) {
-                if ((currentChapter - 1) > -1 && (currentChapter - 1) != 0) {
-                    currentChapter--;
-
-                    string selectedChapter = " " + currentChapter + ":";
-
-                    List<string> bibleVerses = new();
-
-                    foreach (string chapter in chapters) {
-                        if (chapter.StartsWith(Constant.bibleBooks[bookID] + selectedChapter)) {
-                            bibleVerses.Add(chapter);
-                        }
-                    }
-
-                    verses = bibleVerses.ToArray();
-
-                    currentVerse = 0;
-                    biblePresenter.ChangeText(verses[currentVerse].Replace(Constant.bibleBooks[bookID] + selectedChapter, ""));
-
-                    string selectedBook = bookComboBox.GetItemText(bookComboBox.SelectedItem).Trim();
-                    biblePresenter.ChangeHeader(selectedBook + " " + currentChapter);
-
-                    label4.Text = verses[currentVerse].Replace(Constant.bibleBooks[bookID] + selectedChapter, "");
-
-                    chapterComboBox.SelectedIndex = currentChapter - 1;
-                }
-            }
-
-            if (keyData == Keys.Down) {
-                if ((currentChapter - 1) < maxChapter - 1) {
-                    currentChapter++;
-
-                    string selectedChapter = " " + currentChapter + ":";
-
-                    List<string> bibleVerses = new();
-
-                    foreach (string chapter in chapters) {
-                        if (chapter.StartsWith(Constant.bibleBooks[bookID] + selectedChapter)) {
-                            bibleVerses.Add(chapter);
-                        }
-                    }
-
-                    verses = bibleVerses.ToArray();
-
-                    currentVerse = 0;
-                    biblePresenter.ChangeText(verses[currentVerse].Replace(Constant.bibleBooks[bookID] + selectedChapter, ""));
-
-                    string selectedBook = bookComboBox.GetItemText(bookComboBox.SelectedItem).Trim();
-                    biblePresenter.ChangeHeader(selectedBook + " " + currentChapter);
-
-                    label4.Text = verses[currentVerse].Replace(Constant.bibleBooks[bookID] + selectedChapter, "");
-
-                    chapterComboBox.SelectedIndex = currentChapter - 1;
-                }
-            }
-
-            if (keyData == Keys.Left) {
-                if (currentVerse > -1 && currentVerse != 0) {
-                    currentVerse--;
-
-                    displayText();
-                }
-            }
-
-            if (keyData == Keys.Right) {
-                if (currentVerse < verses.Length - 1) {
-                    currentVerse++;
-
-                    displayText();
-                }
-            }
-
             if (keyData == Keys.Escape) {
                 biblePresenter.Close();
             }
@@ -357,6 +290,8 @@ namespace GH_Studio {
 
                     if (verses.Length >= numKey && numKey != 0) {
                         currentVerse = numKey - 1;
+
+                        listBox2.SelectedIndex = currentVerse;
 
                         displayText();
                     }

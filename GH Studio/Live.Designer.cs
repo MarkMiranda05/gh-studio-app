@@ -693,7 +693,7 @@
             fontColorButton.FlatStyle = FlatStyle.Flat;
             fontColorButton.Font = new Font("Ebrima", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             fontColorButton.ForeColor = Color.Black;
-            fontColorButton.Location = new Point(468, 403);
+            fontColorButton.Location = new Point(468, 402);
             fontColorButton.Name = "fontColorButton";
             fontColorButton.Size = new Size(202, 40);
             fontColorButton.TabIndex = 20;
