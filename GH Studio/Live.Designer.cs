@@ -163,6 +163,7 @@
             // lyrics20
             // 
             lyrics20.BackColor = Color.Transparent;
+            lyrics20.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics20.Controls.Add(l20);
             lyrics20.Location = new Point(519, 403);
             lyrics20.Name = "lyrics20";
@@ -173,8 +174,9 @@
             // 
             // l20
             // 
+            l20.BackColor = Color.White;
             l20.Dock = DockStyle.Fill;
-            l20.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l20.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l20.Location = new Point(3, 3);
             l20.Name = "l20";
             l20.Size = new Size(160, 90);
@@ -186,6 +188,7 @@
             // lyrics1
             // 
             lyrics1.BackColor = Color.Transparent;
+            lyrics1.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics1.Controls.Add(l1);
             lyrics1.Location = new Point(3, 3);
             lyrics1.Name = "lyrics1";
@@ -196,9 +199,9 @@
             // 
             // l1
             // 
-            l1.BackColor = Color.Transparent;
+            l1.BackColor = Color.White;
             l1.Dock = DockStyle.Fill;
-            l1.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l1.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l1.Location = new Point(3, 3);
             l1.Name = "l1";
             l1.Size = new Size(160, 88);
@@ -210,6 +213,7 @@
             // lyrics19
             // 
             lyrics19.BackColor = Color.Transparent;
+            lyrics19.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics19.Controls.Add(l19);
             lyrics19.Location = new Point(347, 403);
             lyrics19.Name = "lyrics19";
@@ -220,8 +224,9 @@
             // 
             // l19
             // 
+            l19.BackColor = Color.White;
             l19.Dock = DockStyle.Fill;
-            l19.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l19.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l19.Location = new Point(3, 3);
             l19.Name = "l19";
             l19.Size = new Size(160, 90);
@@ -233,6 +238,7 @@
             // lyrics2
             // 
             lyrics2.BackColor = Color.Transparent;
+            lyrics2.BackgroundImageLayout = ImageLayout.Zoom;
             lyrics2.Controls.Add(l2);
             lyrics2.Location = new Point(175, 3);
             lyrics2.Name = "lyrics2";
@@ -243,8 +249,9 @@
             // 
             // l2
             // 
+            l2.BackColor = Color.White;
             l2.Dock = DockStyle.Fill;
-            l2.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l2.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l2.Location = new Point(3, 3);
             l2.Name = "l2";
             l2.Size = new Size(160, 88);
@@ -256,6 +263,7 @@
             // lyrics18
             // 
             lyrics18.BackColor = Color.Transparent;
+            lyrics18.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics18.Controls.Add(l18);
             lyrics18.Location = new Point(175, 403);
             lyrics18.Name = "lyrics18";
@@ -266,8 +274,9 @@
             // 
             // l18
             // 
+            l18.BackColor = Color.White;
             l18.Dock = DockStyle.Fill;
-            l18.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l18.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l18.Location = new Point(3, 3);
             l18.Name = "l18";
             l18.Size = new Size(160, 90);
@@ -279,6 +288,7 @@
             // lyrics3
             // 
             lyrics3.BackColor = Color.Transparent;
+            lyrics3.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics3.Controls.Add(l3);
             lyrics3.Location = new Point(347, 3);
             lyrics3.Name = "lyrics3";
@@ -289,8 +299,9 @@
             // 
             // l3
             // 
+            l3.BackColor = Color.White;
             l3.Dock = DockStyle.Fill;
-            l3.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l3.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l3.Location = new Point(3, 3);
             l3.Name = "l3";
             l3.Size = new Size(160, 88);
@@ -302,6 +313,7 @@
             // lyrics16
             // 
             lyrics16.BackColor = Color.Transparent;
+            lyrics16.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics16.Controls.Add(l16);
             lyrics16.Location = new Point(519, 303);
             lyrics16.Name = "lyrics16";
@@ -312,8 +324,9 @@
             // 
             // l16
             // 
+            l16.BackColor = Color.White;
             l16.Dock = DockStyle.Fill;
-            l16.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l16.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l16.Location = new Point(3, 3);
             l16.Name = "l16";
             l16.Size = new Size(160, 88);
@@ -325,6 +338,7 @@
             // lyrics17
             // 
             lyrics17.BackColor = Color.Transparent;
+            lyrics17.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics17.Controls.Add(l17);
             lyrics17.Location = new Point(3, 403);
             lyrics17.Name = "lyrics17";
@@ -335,8 +349,9 @@
             // 
             // l17
             // 
+            l17.BackColor = Color.White;
             l17.Dock = DockStyle.Fill;
-            l17.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l17.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l17.Location = new Point(3, 3);
             l17.Name = "l17";
             l17.Size = new Size(160, 90);
@@ -348,6 +363,7 @@
             // lyrics15
             // 
             lyrics15.BackColor = Color.Transparent;
+            lyrics15.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics15.Controls.Add(l15);
             lyrics15.Location = new Point(347, 303);
             lyrics15.Name = "lyrics15";
@@ -358,8 +374,9 @@
             // 
             // l15
             // 
+            l15.BackColor = Color.White;
             l15.Dock = DockStyle.Fill;
-            l15.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l15.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l15.Location = new Point(3, 3);
             l15.Name = "l15";
             l15.Size = new Size(160, 88);
@@ -371,6 +388,7 @@
             // lyrics4
             // 
             lyrics4.BackColor = Color.Transparent;
+            lyrics4.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics4.Controls.Add(l4);
             lyrics4.Location = new Point(519, 3);
             lyrics4.Name = "lyrics4";
@@ -381,8 +399,9 @@
             // 
             // l4
             // 
+            l4.BackColor = Color.White;
             l4.Dock = DockStyle.Fill;
-            l4.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l4.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l4.Location = new Point(3, 3);
             l4.Name = "l4";
             l4.Size = new Size(160, 88);
@@ -394,6 +413,7 @@
             // lyrics14
             // 
             lyrics14.BackColor = Color.Transparent;
+            lyrics14.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics14.Controls.Add(l14);
             lyrics14.Location = new Point(175, 303);
             lyrics14.Name = "lyrics14";
@@ -404,8 +424,9 @@
             // 
             // l14
             // 
+            l14.BackColor = Color.White;
             l14.Dock = DockStyle.Fill;
-            l14.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l14.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l14.Location = new Point(3, 3);
             l14.Name = "l14";
             l14.Size = new Size(160, 88);
@@ -417,6 +438,7 @@
             // lyrics5
             // 
             lyrics5.BackColor = Color.Transparent;
+            lyrics5.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics5.Controls.Add(l5);
             lyrics5.Location = new Point(3, 103);
             lyrics5.Name = "lyrics5";
@@ -427,8 +449,9 @@
             // 
             // l5
             // 
+            l5.BackColor = Color.White;
             l5.Dock = DockStyle.Fill;
-            l5.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l5.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l5.Location = new Point(3, 3);
             l5.Name = "l5";
             l5.Size = new Size(160, 88);
@@ -440,6 +463,7 @@
             // lyrics12
             // 
             lyrics12.BackColor = Color.Transparent;
+            lyrics12.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics12.Controls.Add(l12);
             lyrics12.Location = new Point(519, 203);
             lyrics12.Name = "lyrics12";
@@ -450,8 +474,9 @@
             // 
             // l12
             // 
+            l12.BackColor = Color.White;
             l12.Dock = DockStyle.Fill;
-            l12.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l12.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l12.Location = new Point(3, 3);
             l12.Name = "l12";
             l12.Size = new Size(160, 88);
@@ -463,6 +488,7 @@
             // lyrics6
             // 
             lyrics6.BackColor = Color.Transparent;
+            lyrics6.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics6.Controls.Add(l6);
             lyrics6.Location = new Point(175, 103);
             lyrics6.Name = "lyrics6";
@@ -473,8 +499,9 @@
             // 
             // l6
             // 
+            l6.BackColor = Color.White;
             l6.Dock = DockStyle.Fill;
-            l6.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l6.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l6.Location = new Point(3, 3);
             l6.Name = "l6";
             l6.Size = new Size(160, 88);
@@ -486,6 +513,7 @@
             // lyrics11
             // 
             lyrics11.BackColor = Color.Transparent;
+            lyrics11.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics11.Controls.Add(l11);
             lyrics11.Location = new Point(347, 203);
             lyrics11.Name = "lyrics11";
@@ -496,8 +524,9 @@
             // 
             // l11
             // 
+            l11.BackColor = Color.White;
             l11.Dock = DockStyle.Fill;
-            l11.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l11.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l11.Location = new Point(3, 3);
             l11.Name = "l11";
             l11.Size = new Size(160, 88);
@@ -509,6 +538,7 @@
             // lyrics7
             // 
             lyrics7.BackColor = Color.Transparent;
+            lyrics7.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics7.Controls.Add(l7);
             lyrics7.Location = new Point(347, 103);
             lyrics7.Name = "lyrics7";
@@ -519,8 +549,9 @@
             // 
             // l7
             // 
+            l7.BackColor = Color.White;
             l7.Dock = DockStyle.Fill;
-            l7.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l7.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l7.Location = new Point(3, 3);
             l7.Name = "l7";
             l7.Size = new Size(160, 88);
@@ -532,6 +563,7 @@
             // lyrics13
             // 
             lyrics13.BackColor = Color.Transparent;
+            lyrics13.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics13.Controls.Add(l13);
             lyrics13.Location = new Point(3, 303);
             lyrics13.Name = "lyrics13";
@@ -542,8 +574,9 @@
             // 
             // l13
             // 
+            l13.BackColor = Color.White;
             l13.Dock = DockStyle.Fill;
-            l13.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l13.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l13.Location = new Point(3, 3);
             l13.Name = "l13";
             l13.Size = new Size(160, 88);
@@ -555,6 +588,7 @@
             // lyrics8
             // 
             lyrics8.BackColor = Color.Transparent;
+            lyrics8.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics8.Controls.Add(l8);
             lyrics8.Location = new Point(519, 103);
             lyrics8.Name = "lyrics8";
@@ -565,8 +599,9 @@
             // 
             // l8
             // 
+            l8.BackColor = Color.White;
             l8.Dock = DockStyle.Fill;
-            l8.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l8.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l8.Location = new Point(3, 3);
             l8.Name = "l8";
             l8.Size = new Size(160, 88);
@@ -578,6 +613,7 @@
             // lyrics9
             // 
             lyrics9.BackColor = Color.Transparent;
+            lyrics9.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics9.Controls.Add(l9);
             lyrics9.Location = new Point(3, 203);
             lyrics9.Name = "lyrics9";
@@ -588,8 +624,9 @@
             // 
             // l9
             // 
+            l9.BackColor = Color.White;
             l9.Dock = DockStyle.Fill;
-            l9.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l9.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l9.Location = new Point(3, 3);
             l9.Name = "l9";
             l9.Size = new Size(160, 88);
@@ -601,6 +638,7 @@
             // lyrics10
             // 
             lyrics10.BackColor = Color.Transparent;
+            lyrics10.BackgroundImageLayout = ImageLayout.Stretch;
             lyrics10.Controls.Add(l10);
             lyrics10.Location = new Point(175, 203);
             lyrics10.Name = "lyrics10";
@@ -611,8 +649,9 @@
             // 
             // l10
             // 
+            l10.BackColor = Color.White;
             l10.Dock = DockStyle.Fill;
-            l10.Font = new Font("Ebrima", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            l10.Font = new Font("Ebrima", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
             l10.Location = new Point(3, 3);
             l10.Name = "l10";
             l10.Size = new Size(160, 88);
