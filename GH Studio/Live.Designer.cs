@@ -816,7 +816,7 @@
             // 
             // listBox2
             // 
-            listBox2.BackColor = SystemColors.Info;
+            listBox2.BackColor = Color.Khaki;
             listBox2.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             listBox2.FormattingEnabled = true;
             listBox2.ItemHeight = 17;
@@ -912,7 +912,7 @@
             // 
             // listBox1
             // 
-            listBox1.BackColor = SystemColors.Info;
+            listBox1.BackColor = Color.Khaki;
             listBox1.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 17;
@@ -962,7 +962,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Info;
+            BackColor = Color.Khaki;
             ClientSize = new Size(1015, 600);
             Controls.Add(panel1);
             Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);

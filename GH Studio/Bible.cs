@@ -28,6 +28,8 @@ namespace GH_Studio {
 
         private static string numberKey = "";
 
+        private Boolean isLive = false;
+
         BiblePresenter biblePresenter = new();
 
         public Bible() {
@@ -38,10 +40,15 @@ namespace GH_Studio {
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e) {
 
             currentVerse = listBox2.SelectedIndex;
-            displayText();
+            
+            if (isLive) {
+                displayText();
+            }
         }
 
         private void Bible_Load(object sender, EventArgs e) {
+
+            isLive = false;
 
             // Setting of Font Style
             string fontString = File.ReadAllText(Constant.bibleFontStyleFile);
@@ -79,36 +86,7 @@ namespace GH_Studio {
 
         private void goButton_Click(object sender, EventArgs e) {
 
-            string chapterBox = chapterComboBox.GetItemText(chapterComboBox.SelectedItem).Trim();
-
-            int version = versionComboBox.SelectedIndex;
-            string selectedChapter = " " + chapterBox + ":";
-
-            bookID = bookComboBox.SelectedIndex;
-            currentChapter = Int32.Parse(chapterBox);
-            maxChapter = chapterComboBox.Items.Count;
-
-            string book;
-            if (version == 0) {
-                book = readResourceFile("WEB", bookID);
-            } else if (version == 1) {
-                book = readResourceFile("KJV", bookID);
-            } else {
-                book = readResourceFile("TAG", bookID);
-            }
-
-            chapters = book.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-
-            List<string> bibleVerses = new();
-
-            foreach (string chapter in chapters) {
-                if (chapter.StartsWith(Constant.bibleBooks[bookID] + selectedChapter)) {
-                    bibleVerses.Add(chapter);
-                }
-            }
-
-            currentVerse = 0;
-            verses = bibleVerses.ToArray();
+            isLive = true;
 
             if (versionComboBox.SelectedIndex >= 0 && bookComboBox.SelectedIndex >= 0) {
                 int presenterScreenNo = Int32.Parse(File.ReadAllText(Constant.presenterScreenFile));
@@ -139,8 +117,6 @@ namespace GH_Studio {
                     displayText();
                 }
             }
-
-            listBox2.DataSource = bibleVerses;
 
             panel1.Focus();
         }
@@ -241,6 +217,7 @@ namespace GH_Studio {
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData) {
 
             if (keyData == Keys.Escape) {
+                isLive = false;
                 biblePresenter.Close();
             }
 
@@ -312,6 +289,42 @@ namespace GH_Studio {
             biblePresenter.ChangeHeader(selectedBook + " " + currentChapter);
 
             label4.Text = verses[currentVerse].Replace(Constant.bibleBooks[bookID] + selectedChapter, "");
+        }
+
+        private void chapterComboBox_SelectedIndexChanged(object sender, EventArgs e) {
+
+            isLive = false;
+
+            string chapterBox = chapterComboBox.GetItemText(chapterComboBox.SelectedItem).Trim();
+
+            int version = versionComboBox.SelectedIndex;
+            string selectedChapter = " " + chapterBox + ":";
+
+            bookID = bookComboBox.SelectedIndex;
+            currentChapter = Int32.Parse(chapterBox);
+            maxChapter = chapterComboBox.Items.Count;
+
+            string book;
+            if (version == 0) {
+                book = readResourceFile("WEB", bookID);
+            } else if (version == 1) {
+                book = readResourceFile("KJV", bookID);
+            } else {
+                book = readResourceFile("TAG", bookID);
+            }
+
+            chapters = book.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+
+            List<string> bibleVerses = new();
+
+            foreach (string chapter in chapters) {
+                if (chapter.StartsWith(Constant.bibleBooks[bookID] + selectedChapter)) {
+                    bibleVerses.Add(chapter);
+                }
+            }
+
+            verses = bibleVerses.ToArray();
+            listBox2.DataSource = bibleVerses;
         }
     }
 }

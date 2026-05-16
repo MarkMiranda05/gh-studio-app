@@ -116,9 +116,11 @@
             chapterComboBox.Size = new Size(110, 25);
             chapterComboBox.TabIndex = 0;
             chapterComboBox.TabStop = false;
+            chapterComboBox.SelectedIndexChanged += chapterComboBox_SelectedIndexChanged;
             // 
             // panel1
             // 
+            panel1.BackColor = Color.Khaki;
             panel1.Controls.Add(listBox2);
             panel1.Controls.Add(changeColorButton);
             panel1.Controls.Add(removeBackgroundButton);
@@ -266,7 +268,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Info;
+            BackColor = Color.Khaki;
             ClientSize = new Size(1015, 600);
             Controls.Add(panel1);
             Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);

@@ -184,23 +184,43 @@ namespace GH_Studio {
             DateTime startDate = DateTime.Now.Date;
             DateTime endDate = startDate.AddDays(6);
 
+            // Birthday
+            List<String> birthdayCelebrants = new();
+
             foreach (string birthday in birthdays) {
                 string[] split = birthday.Split('=');
                 DateTime rawDate = DateTime.Parse(split[1]);
                 DateTime eventDate = new DateTime(startDate.Year, rawDate.Month, rawDate.Day);
                 if (eventDate >= startDate && eventDate <= endDate) {
-                    currentWeekBirthdays += split[0] + " - " + eventDate.ToString("MMM dd") + Environment.NewLine;
+                    birthdayCelebrants.Add(split[0] + " - " + eventDate.ToString("MMM dd"));
                 }
             }
+
+            var sortedBirthdayCelebrants = birthdayCelebrants.OrderBy(x => {
+                var datePart = x.Split(" - ")[1];
+                return DateTime.ParseExact(datePart, "MMM dd", CultureInfo.InvariantCulture);
+            }).ToList();
+
+            currentWeekBirthdays = string.Join(Environment.NewLine, sortedBirthdayCelebrants.ToArray());
+
+            // Anniversary
+            List<String> anniversaryCelebrants = new();
 
             foreach (string anniversary in anniversaries) {
                 string[] split = anniversary.Split('=');
                 DateTime rawDate = DateTime.Parse(split[1]);
                 DateTime eventDate = new DateTime(startDate.Year, rawDate.Month, rawDate.Day);
                 if (eventDate >= startDate && eventDate <= endDate) {
-                    currentWeekAnniversaries += split[0] + " - " + rawDate.ToString("MMM dd yyyy") + Environment.NewLine;
+                    anniversaryCelebrants.Add(split[0] + " - " + rawDate.ToString("MMM dd"));
                 }
             }
+
+            var sortedAnniversaryCelebrants = anniversaryCelebrants.OrderBy(x => {
+                var datePart = x.Split(" - ")[1];
+                return DateTime.ParseExact(datePart, "MMM dd", CultureInfo.InvariantCulture);
+            }).ToList();
+
+            currentWeekAnniversaries = string.Join(Environment.NewLine, sortedAnniversaryCelebrants.ToArray());
 
             // Save announcements to file
             string announcePath = Path.Combine(Constant.announcementPath, "Announcement.ghlive");

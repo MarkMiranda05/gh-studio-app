@@ -36,6 +36,7 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.BackColor = Color.Khaki;
             tableLayoutPanel1.ColumnCount = 4;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
@@ -127,6 +128,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.Khaki;
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 54);
             panel1.Name = "panel1";

@@ -33,7 +33,7 @@
             // 
             // saveButton
             // 
-            saveButton.BackColor = Color.Wheat;
+            saveButton.BackColor = Color.SandyBrown;
             saveButton.Cursor = Cursors.Hand;
             saveButton.FlatStyle = FlatStyle.Flat;
             saveButton.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -89,7 +89,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Info;
+            BackColor = Color.Khaki;
             ClientSize = new Size(505, 479);
             Controls.Add(saveButton);
             Controls.Add(contentTextBox);

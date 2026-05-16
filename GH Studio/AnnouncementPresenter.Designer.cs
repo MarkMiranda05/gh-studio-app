@@ -37,7 +37,7 @@
             label1.Location = new Point(0, 0);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1924, 1061);
+            label1.Size = new Size(1940, 1100);
             label1.TabIndex = 0;
             label1.Text = "Announcements";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -50,14 +50,14 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1924, 1061);
+            panel1.Size = new Size(1940, 1100);
             panel1.TabIndex = 1;
             // 
             // AnnouncementPresenter
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1924, 1061);
+            ClientSize = new Size(1940, 1100);
             Controls.Add(panel1);
             Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;

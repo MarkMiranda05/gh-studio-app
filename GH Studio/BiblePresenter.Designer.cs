@@ -85,7 +85,7 @@
             // label2
             // 
             label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Ebrima", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Ebrima", 50.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
             label2.Size = new Size(1934, 104);

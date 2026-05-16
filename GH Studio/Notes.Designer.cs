@@ -38,6 +38,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.Khaki;
             panel1.Controls.Add(groupBox2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(13, 14);
@@ -113,7 +114,7 @@
             // 
             // listBox1
             // 
-            listBox1.BackColor = SystemColors.Info;
+            listBox1.BackColor = Color.Khaki;
             listBox1.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 21;
@@ -163,7 +164,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Info;
+            BackColor = Color.Khaki;
             ClientSize = new Size(1015, 600);
             Controls.Add(panel1);
             Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);

@@ -25,6 +25,8 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Announcements));
             panel1 = new Panel();
+            groupBox4 = new GroupBox();
+            fontStyleButton = new Button();
             goAnnounceButton = new Button();
             groupBox3 = new GroupBox();
             button4 = new Button();
@@ -36,21 +38,20 @@
             addButton = new Button();
             groupBox1 = new GroupBox();
             button2 = new Button();
+            button3 = new Button();
             button1 = new Button();
             listBox2 = new ListBox();
-            button3 = new Button();
-            fontStyleButton = new Button();
-            groupBox4 = new GroupBox();
             fontDialog1 = new FontDialog();
             panel1.SuspendLayout();
+            groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
-            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.BackColor = Color.Khaki;
             panel1.Controls.Add(groupBox4);
             panel1.Controls.Add(goAnnounceButton);
             panel1.Controls.Add(groupBox3);
@@ -61,6 +62,35 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(989, 572);
             panel1.TabIndex = 0;
+            // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(fontStyleButton);
+            groupBox4.Font = new Font("Ebrima", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox4.ForeColor = Color.Black;
+            groupBox4.Location = new Point(19, 419);
+            groupBox4.Margin = new Padding(3, 10, 3, 3);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(302, 68);
+            groupBox4.TabIndex = 26;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Config";
+            // 
+            // fontStyleButton
+            // 
+            fontStyleButton.BackColor = Color.Wheat;
+            fontStyleButton.Cursor = Cursors.Hand;
+            fontStyleButton.FlatStyle = FlatStyle.Flat;
+            fontStyleButton.Font = new Font("Ebrima", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            fontStyleButton.ForeColor = Color.Black;
+            fontStyleButton.Location = new Point(8, 27);
+            fontStyleButton.Name = "fontStyleButton";
+            fontStyleButton.Size = new Size(284, 31);
+            fontStyleButton.TabIndex = 25;
+            fontStyleButton.TabStop = false;
+            fontStyleButton.Text = "Change Font Style";
+            fontStyleButton.UseVisualStyleBackColor = false;
+            fontStyleButton.Click += fontStyleButton_Click;
             // 
             // goAnnounceButton
             // 
@@ -168,7 +198,7 @@
             // 
             // listBox1
             // 
-            listBox1.BackColor = SystemColors.Info;
+            listBox1.BackColor = Color.Khaki;
             listBox1.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 17;
@@ -227,6 +257,22 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.Wheat;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Ebrima", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = Color.Black;
+            button3.Location = new Point(9, 326);
+            button3.Name = "button3";
+            button3.Size = new Size(139, 31);
+            button3.TabIndex = 0;
+            button3.TabStop = false;
+            button3.Text = "Add";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // button1
             // 
             button1.BackColor = Color.Wheat;
@@ -245,7 +291,7 @@
             // 
             // listBox2
             // 
-            listBox2.BackColor = SystemColors.Info;
+            listBox2.BackColor = Color.Khaki;
             listBox2.Font = new Font("Ebrima", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             listBox2.FormattingEnabled = true;
             listBox2.ItemHeight = 17;
@@ -256,51 +302,6 @@
             listBox2.TabIndex = 1;
             listBox2.TabStop = false;
             // 
-            // button3
-            // 
-            button3.BackColor = Color.Wheat;
-            button3.Cursor = Cursors.Hand;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Ebrima", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.Black;
-            button3.Location = new Point(9, 326);
-            button3.Name = "button3";
-            button3.Size = new Size(139, 31);
-            button3.TabIndex = 0;
-            button3.TabStop = false;
-            button3.Text = "Add";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
-            // fontStyleButton
-            // 
-            fontStyleButton.BackColor = Color.Wheat;
-            fontStyleButton.Cursor = Cursors.Hand;
-            fontStyleButton.FlatStyle = FlatStyle.Flat;
-            fontStyleButton.Font = new Font("Ebrima", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            fontStyleButton.ForeColor = Color.Black;
-            fontStyleButton.Location = new Point(8, 27);
-            fontStyleButton.Name = "fontStyleButton";
-            fontStyleButton.Size = new Size(284, 31);
-            fontStyleButton.TabIndex = 25;
-            fontStyleButton.TabStop = false;
-            fontStyleButton.Text = "Change Font Style";
-            fontStyleButton.UseVisualStyleBackColor = false;
-            fontStyleButton.Click += fontStyleButton_Click;
-            // 
-            // groupBox4
-            // 
-            groupBox4.Controls.Add(fontStyleButton);
-            groupBox4.Font = new Font("Ebrima", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox4.ForeColor = Color.Black;
-            groupBox4.Location = new Point(19, 419);
-            groupBox4.Margin = new Padding(3, 10, 3, 3);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(302, 68);
-            groupBox4.TabIndex = 26;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Config";
-            // 
             // fontDialog1
             // 
             fontDialog1.Font = new Font("Ebrima", 54.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -309,7 +310,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Info;
+            BackColor = Color.Khaki;
             ClientSize = new Size(1015, 600);
             Controls.Add(panel1);
             Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -324,11 +325,11 @@
             Text = "Announcements";
             Load += Announcements_Load;
             panel1.ResumeLayout(false);
+            groupBox4.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
-            groupBox4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
